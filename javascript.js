@@ -1,5 +1,10 @@
 
+/*
+Executing functions on window load.
+*/
 createGrid();
+
+
 
 /*
 Use DOM to create divs to construct the 16x16 grid with a nestled for loop.
@@ -22,8 +27,3 @@ function createGrid(){
     }
 
 }
-
-
-
-
-
