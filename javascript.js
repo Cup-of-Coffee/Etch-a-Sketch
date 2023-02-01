@@ -27,3 +27,12 @@ function createGrid(){
     }
 
 }
+
+
+
+/*
+Use DOM to have grid squares change color when a mouse hovers over them.
+*/
+function etch() {
+
+}
