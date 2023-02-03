@@ -10,8 +10,13 @@
 }
 
 .column {
-    background-color: cadetblue;
+    border-style: solid;
+    border-color: black;
     height: 25px;
     width: 25px;
     margin: 5px;
+}
+
+.hovered {
+    background-color: cadetblue;
 }

@@ -21,6 +21,9 @@ function createGrid(){
         for(n = 0; n < 16; n++){
             const column = document.createElement('div');
             column.classList.add('column');
+            column.setAttribute('onmouseover','etch(this)');
+        
+            // add a DOM to add the onmouseover="etch()" or hover set
 
             row.appendChild(column);
         }
@@ -33,6 +36,6 @@ function createGrid(){
 /*
 Use DOM to have grid squares change color when a mouse hovers over them.
 */
-function etch() {
-
+function etch(square) {
+    square.classList.add('hovered');
 }
