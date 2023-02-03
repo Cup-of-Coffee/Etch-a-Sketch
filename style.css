@@ -1,7 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color: lightgrey;
+}
 
-.container {
+.grid {
     display: flex;
     flex-direction: stretch;
+    box-shadow: black 0px 3px 8px;
 }
 
 .row {
@@ -10,11 +17,9 @@
 }
 
 .column {
-    border-style: solid;
-    border-color: black;
     height: 25px;
     width: 25px;
-    margin: 5px;
+    background-color: white;
 }
 
 .hovered {

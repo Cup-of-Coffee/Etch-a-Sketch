@@ -8,22 +8,22 @@ createGrid();
 
 /*
 Use DOM to create divs to construct the 16x16 grid with a nestled for loop.
+    PROBLEM: Figure out a way to have onmousedown and onmousehover work at the same time
 */
 function createGrid(){
-    const container = document.querySelector('#container');
+    const grid = document.querySelector('#grid');
 
     for(i = 0; i < 16; i++){
         const row = document.createElement('div');
         row.classList.add('row');
 
-        container.appendChild(row);
+        grid.appendChild(row);
 
         for(n = 0; n < 16; n++){
             const column = document.createElement('div');
             column.classList.add('column');
             column.setAttribute('onmouseover','etch(this)');
-        
-            // add a DOM to add the onmouseover="etch()" or hover set
+            //column.addEventListener('onmousedown',etch(this));    keeps returning this as undefined.
 
             row.appendChild(column);
         }
