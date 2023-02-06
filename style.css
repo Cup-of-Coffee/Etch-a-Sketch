@@ -5,9 +5,16 @@ body {
     background-color: lightgrey;
 }
 
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
 .container {
     display: flex;
     justify-content: stretch;
+    padding: 50px;
+    column-gap: 100px;
 }
 
 .controls {
