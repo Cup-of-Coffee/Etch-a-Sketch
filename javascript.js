@@ -1,4 +1,12 @@
 /*
+TODO:
+@ button to change number of squares, w/ a limit of 100 and 2.
+@ button to change color of paint.
+
+*/
+
+
+/*
 Executing functions on window load.
 */
 createGrid();
