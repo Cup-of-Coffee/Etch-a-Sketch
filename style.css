@@ -5,10 +5,22 @@ body {
     background-color: lightgrey;
 }
 
+.container {
+    display: flex;
+    justify-content: stretch;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: black 0px 4px 8px;
+}
+
 .grid {
     display: flex;
     flex-direction: stretch;
-    box-shadow: black 0px 3px 8px;
+    box-shadow: black 0px 4px 8px;
 }
 
 .row {
