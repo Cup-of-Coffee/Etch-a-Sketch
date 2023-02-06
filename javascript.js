@@ -1,4 +1,3 @@
-
 /*
 Executing functions on window load.
 */
@@ -22,13 +21,11 @@ function createGrid(){
         for(n = 0; n < 16; n++){
             const column = document.createElement('div');
             column.classList.add('column');
-            column.setAttribute('onmouseover','etch(this)');
-            //column.addEventListener('onmousedown',etch(this));    keeps returning this as undefined.
-
+            column.setAttribute('onmouseover','color(this)');
+            
             row.appendChild(column);
         }
     }
-
 }
 
 
@@ -36,6 +33,6 @@ function createGrid(){
 /*
 Use DOM to have grid squares change color when a mouse hovers over them.
 */
-function etch(square) {
-    square.classList.add('hovered');
+function color(square) {
+    square.classList.add('colored');
 }
