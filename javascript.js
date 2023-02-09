@@ -58,3 +58,13 @@ function reset() {
 
     createGrid();
 }
+
+
+
+/*
+Set the gridSize var to the inputted number, executing the reset() function to reset the grid.
+*/
+function resize(){
+
+}
+
