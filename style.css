@@ -10,23 +10,24 @@ p {
     font-weight: bold;
 }
 
-.container {
+#container {
     display: flex;
-    justify-content: stretch;
+    justify-content: center;
     padding: 50px;
     column-gap: 100px;
 }
 
-.controls {
+#controls {
     display: flex;
     flex-direction: column;
     background-color: white;
+    border-radius: 10px;
     box-shadow: black 0px 4px 8px;
+    padding: 0px 20px 20px 20px;
+    row-gap: 10px;
 }
 
-.grid {
-    display: flex;
-    flex-direction: stretch;
+#grid {
     box-shadow: black 0px 4px 8px;
 }
 
