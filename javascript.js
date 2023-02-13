@@ -9,7 +9,7 @@ TODO:
 /*
 Executing functions on window load.
 */
-let gridSize = 16;
+let gridSize = 16; // The starting grid size of 16x16.
 createGrid();
 
 
@@ -26,22 +26,22 @@ function createGrid(){
         grid.removeChild(grid.lastChild);
     }
 
-    // Use a for loop of the grid's size to create the rows and column elements, using DOM to add in the proper classes.
-    for(i = 0; i < gridSize; i++){
-        const row = document.createElement('div');
-        row.classList.add('row');
-        console.log("row #" + i);
+    // Use DOM to add to setup a div with the proper classes, events and width/height sizing.
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.setAttribute('onmouseover','color(this)');
 
-        grid.appendChild(row);
+    let squareDimensions = 400/gridSize;
+    square.style.height = squareDimensions + "px";
+    square.style.width = squareDimensions + "px";
 
-        for(n = 0; n < gridSize; n++){
-            const column = document.createElement('div');
-            column.classList.add('column');
-            column.setAttribute('onmouseover','color(this)');
-            
-            row.appendChild(column);
-        }
+    // Use a for loop of repeatly generate the div to populate the grid.
+    for(i = 0; i < gridSize * gridSize; i++){
+        grid.appendChild(square.cloneNode(true));
     }
+
+    // Set the square ID to have the proper height and width sizing of the current grid. This is mainly used when calling createGrid again to resize the grid.
+
 }
 
 
@@ -74,9 +74,7 @@ function resize(){
     let message = prompt("Enter a number between 1 and 100 for the grid:");
 
     if(message <= 100 && message >= 1){
-        reset();
-
-        gridSize = message;
+        gridSize = message * message;
 
         createGrid();
     }else{

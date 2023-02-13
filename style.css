@@ -36,18 +36,17 @@ p {
     width: 400px;
     height: 400px;
     box-shadow: black 0px 4px 8px;
-    overflow: hidden;
-}
 
-.row {
     display: flex;
-    justify-content: stretch;
-    height: 25px;
+    justify-content:stretch;
+    flex-flow: row wrap;
+    position: relative;
 }
 
-.column {
+.square {
     background-color: white;
-    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .colored {
