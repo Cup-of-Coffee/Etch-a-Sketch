@@ -74,7 +74,7 @@ function resize(){
     let message = prompt("Enter a number between 1 and 100 for the grid:");
 
     if(message <= 100 && message >= 1){
-        gridSize = message * message;
+        gridSize = message;
 
         createGrid();
     }else{
