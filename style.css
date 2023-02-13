@@ -10,10 +10,15 @@ p {
     font-weight: bold;
 }
 
+#title {
+    padding: 10px;
+    font-size: 40px;
+}
+
 #container {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 0px 50px 0px 50px;
     column-gap: 100px;
 }
 
