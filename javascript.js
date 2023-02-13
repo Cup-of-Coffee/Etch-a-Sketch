@@ -30,6 +30,7 @@ function createGrid(){
     for(i = 0; i < gridSize; i++){
         const row = document.createElement('div');
         row.classList.add('row');
+        console.log("row #" + i);
 
         grid.appendChild(row);
 

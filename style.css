@@ -33,18 +33,21 @@ p {
 }
 
 #grid {
+    width: 400px;
+    height: 400px;
     box-shadow: black 0px 4px 8px;
+    overflow: hidden;
 }
 
 .row {
     display: flex;
     justify-content: stretch;
+    height: 25px;
 }
 
 .column {
-    height: 25px;
-    width: 25px;
     background-color: white;
+    width: 100%;
 }
 
 .colored {
