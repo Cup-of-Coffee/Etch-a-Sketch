@@ -38,7 +38,7 @@ p {
     box-shadow: black 0px 4px 8px;
 
     display: flex;
-    justify-content:stretch;
+    justify-content: stretch;
     flex-flow: row wrap;
     position: relative;
 }

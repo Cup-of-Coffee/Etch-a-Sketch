@@ -32,6 +32,7 @@ function createGrid(){
     square.setAttribute('onmouseover','color(this)');
 
     let squareDimensions = 400/gridSize;
+    squareDimensions = Math.round(squareDimensions * 10) / 10;
     square.style.height = squareDimensions + "px";
     square.style.width = squareDimensions + "px";
 
