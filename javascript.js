@@ -56,7 +56,7 @@ function color(square) {
 
 
 /*
-Use DOM to remove the grid and then execute the createGrid(); funmction.
+Use DOM to remove the grid and then execute the createGrid(); function.
 */
 function reset() {
     const grid = document.querySelector('#grid');
