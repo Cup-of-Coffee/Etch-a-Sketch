@@ -2,14 +2,16 @@
 TODO:
 @ button to change number of squares, w/ a limit of 100 and 2.
 @ button to change color of paint.
-
+@ add hover and hold functionality.
 */
+
 
 
 /*
 Executing functions on window load.
 */
 let gridSize = 16; // The starting grid size of 16x16.
+let eraseCase = false;
 createGrid();
 
 
@@ -51,7 +53,24 @@ function createGrid(){
 Use DOM to have grid squares change color when a mouse hovers over them.
 */
 function color(square) {
-    square.classList.add('colored');
+    if(!eraseCase){
+        square.classList.add('colored');
+    }else{
+        square.classList.remove('colored');
+    }
+}
+
+
+
+/*
+Switch eraseCase to true or false.
+*/
+function erase() {
+    if(!eraseCase){
+        eraseCase = true;
+    }else{
+        eraseCase = false;
+    }
 }
 
 
