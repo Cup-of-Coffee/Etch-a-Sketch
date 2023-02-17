@@ -68,8 +68,16 @@ Switch eraseCase to true or false.
 function erase() {
     if(!eraseCase){
         eraseCase = true;
+
+        // Change the word of the Erase button to Paint.
+        const eraseB = document.getElementById('eraseButton');
+        eraseB.innerHTML = "Paint";
     }else{
         eraseCase = false;
+
+        // Change the word of the Erase button back to Erase.
+        const eraseB = document.getElementById('eraseButton');
+        eraseB.innerHTML = "Erase";
     }
 }
 
