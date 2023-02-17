@@ -12,7 +12,7 @@ Executing functions on window load.
 */
 let gridSize = 16; // The starting grid size of 16x16.
 let eraseCase = false;
-let currentColor = "";
+let currentColor = "#5f9ea0";
 createGrid();
 
 
@@ -55,9 +55,9 @@ Use DOM to have grid squares change color when a mouse hovers over them.
 */
 function color(square) {
     if(!eraseCase){
-        square.classList.add('colored');
+        square.style.backgroundColor = currentColor;
     }else{
-        square.classList.remove('colored');
+        square.style.backgroundColor.remove();
     }
 }
 
