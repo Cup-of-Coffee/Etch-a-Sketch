@@ -48,7 +48,3 @@ p {
     display: flex;
     flex-flow: row wrap;
 }
-
-.colored {
-    background-color: cadetblue;
-}

@@ -13,7 +13,27 @@ Executing functions on window load.
 let gridSize = 16; // The starting grid size of 16x16.
 let eraseCase = false;
 let currentColor = "#5f9ea0";
+startup();
 createGrid();
+
+
+
+/*
+Add EventListeners on page load.
+*/
+function startup(){
+    //Add EventListeners for the color picker, set default color
+    const colorPicker = document.getElementById('color');
+    colorPicker.addEventListener("input", updateFirst, false);
+    colorPicker.value = currentColor;
+}
+
+function updateFirst(event) {
+    const picker = document.querySelector("p");
+    if (picker) {
+        currentColor = event.target.value;
+    }
+}
 
 
 
@@ -43,9 +63,6 @@ function createGrid(){
     for(i = 0; i < gridSize * gridSize; i++){
         grid.appendChild(square.cloneNode(true));
     }
-
-    // Set the square ID to have the proper height and width sizing of the current grid. This is mainly used when calling createGrid again to resize the grid.
-
 }
 
 
@@ -64,14 +81,19 @@ function color(square) {
 
 
 /*
-Pick colors.
+Use DOM to get the color value and switch it to current color.
 */
 function canvas(){
     const select = document.getElementById('color');
-    currentColor = select;
+    select.select();
 
-    const colored = document.querySelector('.colored');
-    colored.style.color = currentColor;
+
+    //console.log(select);
+
+
+    //select.style.color = event.target.value;
+    
+    //console.log(select);
 }
 
 
