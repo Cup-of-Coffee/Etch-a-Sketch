@@ -13,27 +13,7 @@ Executing functions on window load.
 let gridSize = 16; // The starting grid size of 16x16.
 let eraseCase = false;
 let currentColor = "#5f9ea0";
-startup();
 createGrid();
-
-
-
-/*
-Add EventListeners on page load.
-*/
-function startup(){
-    //Add EventListeners for the color picker, set default color
-    const colorPicker = document.getElementById('color');
-    colorPicker.addEventListener("input", updateFirst, false);
-    colorPicker.value = currentColor;
-}
-
-function updateFirst(event) {
-    const picker = document.querySelector("p");
-    if (picker) {
-        currentColor = event.target.value;
-    }
-}
 
 
 
@@ -42,6 +22,11 @@ Use DOM to create divs to construct the 16x16 grid with a nestled for loop.
     PROBLEM: Figure out a way to have onmousedown and onmousehover work at the same time
 */
 function createGrid(){
+    // Select color div and set it to the starting color.
+    const colorPicker = document.getElementById('color');
+    colorPicker.value = currentColor;
+
+    // Select grid div.
     const grid = document.querySelector('#grid');
 
     // Remove any existing elements. This is mainly used when calling createGrid again to resize the grid.
@@ -81,19 +66,10 @@ function color(square) {
 
 
 /*
-Use DOM to get the color value and switch it to current color.
+Change current color to picked color from input when closing color window.
 */
-function canvas(){
-    const select = document.getElementById('color');
-    select.select();
-
-
-    //console.log(select);
-
-
-    //select.style.color = event.target.value;
-    
-    //console.log(select);
+function canvas(event){
+    currentColor = event.target.value;
 }
 
 
