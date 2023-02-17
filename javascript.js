@@ -12,6 +12,7 @@ Executing functions on window load.
 */
 let gridSize = 16; // The starting grid size of 16x16.
 let eraseCase = false;
+let currentColor = "";
 createGrid();
 
 
@@ -58,6 +59,19 @@ function color(square) {
     }else{
         square.classList.remove('colored');
     }
+}
+
+
+
+/*
+Pick colors.
+*/
+function canvas(){
+    const select = document.getElementById('color');
+    currentColor = select;
+
+    const colored = document.querySelector('.colored');
+    colored.style.color = currentColor;
 }
 
 
